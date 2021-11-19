@@ -1,5 +1,7 @@
 module Series1
 
+import IO;
+
 
 /*
  * Documentation: http://docs.rascal-mpl.org 
@@ -15,6 +17,7 @@ module Series1
  */
  
 void helloWorld() {
+	println("Hello World!");
 } 
 
 
@@ -25,11 +28,26 @@ void helloWorld() {
  */
  
 void fizzBuzz() {
-
+	for (int n <- [1 .. 101]) {
+		div3 = n % 3 == 0;
+		div5 = n % 5 == 0;
+		if (div3) {
+			print("FIZZ");
+		}
+		if (div5) {
+			print("BUZZ");
+		}
+		if (!div3 && !div5) {
+			print(n);
+		}
+		print("\n");
+	}
 }
 
 list[str] fizzBuzz() {
-
+	for (int n <- [1 .. 101]) {
+		
+	}
 }
 
 /*
